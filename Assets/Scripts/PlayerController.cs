@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         lifeTxt.text = life.ToString();
         pontosTxt.text = pontos.ToString();
         //movimento
