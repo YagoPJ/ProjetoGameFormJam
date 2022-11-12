@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class Inimigos : MonoBehaviour
 {
+
     public float speed;
+    private bool colidiu;
+
+    [SerializeField]
+    GameController gameControll;
     // Start is called before the first frame update
     void Start()
     {
-        
+        colidiu = false;
+        gameControll = GameObject.Find("GameController").gameObject.GetComponent<GameController>();
+
+
     }
 
     // Update is called once per frame
@@ -24,15 +32,21 @@ public class Inimigos : MonoBehaviour
             }
             Destroy(gameObject);
         }
+
+        if (colidiu == true)
+        {
+            Destroy(gameObject);
+            PlayerController.pontos += 1;
+            gameControll.SalvarScore();
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
-            PlayerController.pontos += 1;
+            colidiu = true;
         }
     }
 }

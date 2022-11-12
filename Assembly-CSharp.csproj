@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\GerarInimigo.cs" />
     <Compile Include="Assets\Graphics\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
+    <Compile Include="Assets\GameController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

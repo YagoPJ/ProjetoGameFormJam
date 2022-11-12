@@ -5,7 +5,7 @@ using UnityEngine;
 public class GerarInimigo : MonoBehaviour
 {
     public GameObject[] listaInimigo;
-    public Inimigos inimigo;
+    //public Inimigos inimigo;
     public bool criar = true;
     public float timeCreate;
 
