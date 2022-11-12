@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+
+    #region Variables
+    [SerializeField] GameObject title;
     [SerializeField] GameObject startButton;
     [SerializeField] GameObject aboutButton;
     [SerializeField] GameObject customizeButton;
     [SerializeField] GameObject previousButton;
     [SerializeField] GameObject nextButton;
+    [SerializeField] GameObject backCustomizeButton;
+    [SerializeField] GameObject backAboutButton;
 
     Animator startAnim;
     Animator aboutAnim;
@@ -18,43 +24,144 @@ public class UIManager : MonoBehaviour
     [SerializeField] Animator fadeBlockAnim;
 
     [SerializeField] List<Mesh> shooterMesh;
-    [SerializeField] List<Texture> shooterMaterial;
+    [SerializeField] List<Material> shooterMaterial;
 
     [SerializeField] GameObject player;
 
-    private int modelIndex;
+    [SerializeField] TextMeshProUGUI aboutText;
 
+    [SerializeField] GameObject mainCamera;
+
+    private int modelIndex;
+    #endregion
+
+    #region Start - MonoBehavior
     private void Start()
     {
         startAnim = startButton.gameObject.GetComponent<Animator>();
         aboutAnim = aboutButton.gameObject.GetComponent<Animator>();
         customizeAnim = customizeButton.gameObject.GetComponent<Animator>();
         modelIndex = 0;
+
+        previousButton.SetActive(false);
+        nextButton.SetActive(false);
+        backCustomizeButton.SetActive(false);
+        backAboutButton.SetActive(false);
     }
+    #endregion
+
+    #region Customize
     public void Customize()
     {
-        startAnim.Play("StartButtonFadeOut");
-        aboutAnim.Play("AboutButtonFadeOut");
-        customizeAnim.Play("CustomizeButtonFadeOut");
+        FadeOutMainMenuButtons();
 
         fadeBlockAnim.Play("FadeBlockerOut");
 
         previousButton.SetActive(true);
         nextButton.SetActive(true);
-        modelIndex = 0;
+        backCustomizeButton.SetActive(true);
     }
 
     public void NextModel()
     {
-        modelIndex++;
-        if (modelIndex >= 0)
-            player.GetComponent<MeshFilter>().mesh = shooterMesh[modelIndex];
+        ChangeShooter(System.Reflection.MethodBase.GetCurrentMethod().Name);
     }
 
     public void PreviousModel()
     {
-        modelIndex--;
-        if (modelIndex >= 0)
-            player.GetComponent<Material>().mainTexture = shooterMaterial[modelIndex];
+        ChangeShooter(System.Reflection.MethodBase.GetCurrentMethod().Name);
     }
+
+    public void BackFromCustomize()
+    {
+        BackToMainScreen(System.Reflection.MethodBase.GetCurrentMethod().Name);
+    }
+
+    private void ChangeShooter(string nameOfMethod)
+    {
+        if (nameOfMethod.Equals("PreviousModel"))
+        {
+            if (modelIndex > 0 && modelIndex <= (shooterMesh.Count - 1))
+            {
+                modelIndex--;
+                ChangeMeshMaterial();
+            }
+        }
+        else
+        {
+            if (modelIndex >= 0 && modelIndex < (shooterMesh.Count - 1))
+            {
+                modelIndex++;
+                ChangeMeshMaterial();
+            }
+        }
+    }
+
+    private void ChangeMeshMaterial()
+    {
+        player.GetComponent<MeshFilter>().mesh = shooterMesh[modelIndex];
+        player.GetComponent<MeshRenderer>().material = shooterMaterial[modelIndex];
+    }
+    #endregion
+
+    #region About
+    public void About()
+    {
+        FadeOutMainMenuButtons();
+
+        backAboutButton.SetActive(true);
+        aboutText.gameObject.GetComponent<Animator>().Play("AboutTextIn");
+    }
+    public void BackFromAbout()
+    {
+        BackToMainScreen(System.Reflection.MethodBase.GetCurrentMethod().Name);
+    }
+    #endregion
+
+    #region Start Game
+    public void StartGame()
+    {
+        startButton.SetActive(false);
+        aboutButton.SetActive(false);
+        customizeButton.SetActive(false);
+        title.SetActive(false);
+        fadeBlockAnim.Play("FadeBlockerOut");
+
+        mainCamera.gameObject.GetComponent<Animator>().Play("CameraStart");
+    }
+    #endregion
+
+    #region Utilities
+    private void FadeOutMainMenuButtons()
+    {
+        startAnim.Play("StartButtonFadeOut");
+        aboutAnim.Play("AboutButtonFadeOut");
+        customizeAnim.Play("CustomizeButtonFadeOut");
+    }
+    private void FadeInMainMenuButtons()
+    {
+        startAnim.Play("StartButtonFadeIn");
+        aboutAnim.Play("AboutButtonFadeIn");
+        customizeAnim.Play("CustomizeButtonFadeIn");
+    }
+    private void BackToMainScreen(string nameOfMethod)
+    {
+        FadeInMainMenuButtons();
+
+        if (nameOfMethod.Equals("BackFromCustomize"))
+        {
+            fadeBlockAnim.Play("FadeBlockerIn");
+
+            previousButton.SetActive(false);
+            nextButton.SetActive(false);
+            backCustomizeButton.SetActive(false);
+        }
+        else if (nameOfMethod.Equals("BackFromAbout"))
+        {
+            aboutText.gameObject.GetComponent<Animator>().Play("AboutTextOut");
+            backAboutButton.SetActive(false);
+        }
+            
+    }
+    #endregion
 }
