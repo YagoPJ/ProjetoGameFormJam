@@ -56,11 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\PlanetMovement.cs" />
+    <Compile Include="Assets\Scripts\ScrollingSkyBox.cs" />
     <Compile Include="Assets\Graphics\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
     <Compile Include="Assets\Graphics\SpaceSkies Free\Demo\Scripts\LookCamera.cs" />
     <Compile Include="Assets\Graphics\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
-    <Compile Include="Assets\Scripts\ScrollingSkyBox.cs" />
-    <Compile Include="Assets\Scripts\PlanetMovement.cs" />
+    <Compile Include="Assets\Scripts\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
