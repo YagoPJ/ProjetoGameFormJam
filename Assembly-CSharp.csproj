@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F04A53D5-6B6E-A8E5-F602-20F23AE6ADFA}</ProjectGuid>
+    <ProjectGuid>{3D0F6E15-BEA8-48EF-F13C-66B2B0024825}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,7 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlanetMovement.cs" />
-    <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Inimigos.cs" />
     <Compile Include="Assets\Scripts\ScrollingSkyBox.cs" />
@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\GerarInimigo.cs" />
     <Compile Include="Assets\Graphics\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
+    <Compile Include="Assets\Scripts\GerarBuff.cs" />
+    <Compile Include="Assets\Scripts\Buffs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

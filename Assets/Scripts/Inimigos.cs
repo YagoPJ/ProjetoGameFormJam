@@ -15,8 +15,6 @@ public class Inimigos : MonoBehaviour
     {
         colidiu = false;
         gameControll = GameObject.Find("GameController").gameObject.GetComponent<GameController>();
-
-
     }
 
     // Update is called once per frame
@@ -41,12 +39,18 @@ public class Inimigos : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(collision.gameObject);
             colidiu = true;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            FindObjectOfType<PlayerController>().life -= 1;
+            Destroy(gameObject);
         }
     }
 }

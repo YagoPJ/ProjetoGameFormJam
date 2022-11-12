@@ -24,15 +24,14 @@ public class GerarInimigo : MonoBehaviour
             StartCoroutine(criarInimigo());
         }
     }
-
     IEnumerator criarInimigo()
     {
-        GameObject inimigosLista = listaInimigo[Random.Range(0, listaInimigo.Length - 1)];
+        GameObject inimigoLista = listaInimigo[Random.Range(0, listaInimigo.Length - 1)];
         yield return new WaitForSeconds(timeCreate);
         criar = true;
         float y = Random.Range(-3.6f, 5.5f);
         float speed = Random.Range(0.01f, 0.05f);
-        Inimigos inim = Instantiate(inimigosLista, transform.position + new Vector3(0, y, 0), transform.rotation = Quaternion.Euler(180, 90, -90)).GetComponent<Inimigos>();
+        Inimigos inim = Instantiate(inimigoLista, transform.position + new Vector3(0, y, 0), transform.rotation = Quaternion.Euler(180, 90, -90)).GetComponent<Inimigos>();
         inim.speed = speed;
     }
 }
