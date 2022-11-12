@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject nextButton;
     [SerializeField] GameObject backCustomizeButton;
     [SerializeField] GameObject backAboutButton;
+    [SerializeField] GameObject lifeText;
+    [SerializeField] GameObject pointsText;
 
     Animator startAnim;
     Animator aboutAnim;
@@ -31,6 +33,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI aboutText;
 
     [SerializeField] GameObject mainCamera;
+    [SerializeField] PlayerController playerControllerScript;
 
     private int modelIndex;
     #endregion
@@ -47,6 +50,8 @@ public class UIManager : MonoBehaviour
         nextButton.SetActive(false);
         backCustomizeButton.SetActive(false);
         backAboutButton.SetActive(false);
+        lifeText.SetActive(false);
+        pointsText.SetActive(false);
     }
     #endregion
 
@@ -127,7 +132,9 @@ public class UIManager : MonoBehaviour
         title.SetActive(false);
         fadeBlockAnim.Play("FadeBlockerOut");
 
-        mainCamera.gameObject.GetComponent<Animator>().Play("CameraStart");
+        player.gameObject.GetComponent<Animator>().Play("PlayerStartAnim");
+
+        StartCoroutine(WaitToMoveAndShowPoints());
     }
     #endregion
 
@@ -162,6 +169,14 @@ public class UIManager : MonoBehaviour
             backAboutButton.SetActive(false);
         }
             
+    }
+
+    private IEnumerator WaitToMoveAndShowPoints()
+    {
+        yield return new WaitForSeconds(1);
+        playerControllerScript.canMove = true;
+        lifeText.SetActive(true);
+        pointsText.SetActive(true);
     }
     #endregion
 }
