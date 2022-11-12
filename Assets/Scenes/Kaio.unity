@@ -229,7 +229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.85, y: 0.89248526}
   m_AnchorMax: {x: 0.99000007, y: 0.97900003}
-  m_AnchoredPosition: {x: 0, y: 0.28274536}
+  m_AnchoredPosition: {x: 0, y: 0.28271484}
   m_SizeDelta: {x: -1.1760254, y: 0.5654793}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505669043
@@ -704,7 +704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17440198988977400}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -8.34, y: 1, z: 0}
   m_LocalScale: {x: 0.185574, y: 0.185574, z: 0.185574}
   m_Children:
   - {fileID: 7417782379795734199}
@@ -772,8 +772,8 @@ MonoBehaviour:
   bullet: {fileID: 2204349478201033731, guid: 24833351073b7f849b905f407047d0f3, type: 3}
   lifeTxt: {fileID: 1142352248}
   pontosTxt: {fileID: 505669043}
-  yPos: 0
-  xPos: 0
+  yPos: 1
+  xPos: -8.34
   canReload: 1
 --- !u!65 &816857665890809824
 BoxCollider:

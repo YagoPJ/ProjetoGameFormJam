@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         bullets += 1;
         canReload = true;
     }
