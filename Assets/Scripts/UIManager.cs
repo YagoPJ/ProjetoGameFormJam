@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
 
     #region Variables
     [SerializeField] GameObject title;
+    [SerializeField] GameObject titlePontos;
     [SerializeField] GameObject startButton;
     [SerializeField] GameObject aboutButton;
     [SerializeField] GameObject customizeButton;
@@ -130,6 +131,8 @@ public class UIManager : MonoBehaviour
         aboutButton.SetActive(false);
         customizeButton.SetActive(false);
         title.SetActive(false);
+        titlePontos.SetActive(false);
+
         fadeBlockAnim.Play("FadeBlockerOut");
 
         player.gameObject.GetComponent<Animator>().Play("PlayerStartAnim");

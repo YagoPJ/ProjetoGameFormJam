@@ -8,14 +8,15 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         //StartCoroutine(TimeDestroy());
-        transform.position += new Vector3(1.5f, 0, 0);
+        transform.position += new Vector3(2f, 0, 0);
+        transform.rotation = Quaternion.Euler(0, 180, -90);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0.1f, 0, 0);
-        if(transform.position.x > 11.2f)
+        transform.position += new Vector3(0.25f, 0, 0);
+        if(transform.position.x > 13.26f)
         {
             Destroy(gameObject);
         }

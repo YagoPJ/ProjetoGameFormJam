@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Config")]
     public static int pontos = 0;
+    public static float timeBullet = 0.8f;
     public int life = 5;
-    public float speed;
+    public static float speedNave = 0.03f;
     public int bullets;
     public int maxBullets;
     [Header("Imports")]
@@ -19,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public float yPos;
     public float xPos;
     public bool canReload = true;
+
+    public Animator animNave;
 
     [SerializeField] GameObject playerChild;
     public bool canMove;
@@ -38,13 +41,13 @@ public class PlayerController : MonoBehaviour
             pontosTxt.text = pontos.ToString();
             //movimento
             float y = Input.GetAxisRaw("Vertical");
-            yPos += y * speed;
-            yPos = Mathf.Clamp(yPos, -14.58f, 13.58f); // limitando o valor que a variavel pode ter
+            yPos += y * speedNave;
+            yPos = Mathf.Clamp(yPos, -5f, 4.9f); // limitando o valor que a variavel pode ter
             transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
 
             float x = Input.GetAxisRaw("Horizontal");
-            xPos += x * speed;
-            xPos = Mathf.Clamp(xPos, -9.6f, 9.6f); // limitando o valor que a variavel pode ter
+            xPos += x * speedNave;
+            xPos = Mathf.Clamp(xPos, -1.47f, 19.80f); // limitando o valor que a variavel pode ter
             transform.position = new Vector3(xPos, transform.position.y, transform.position.z);
 
             //atirar
@@ -68,7 +71,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(timeBullet);
         bullets += 1;
         canReload = true;
     }

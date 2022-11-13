@@ -19,6 +19,6 @@ public class PlanetMovement : MonoBehaviour
     private void Update()
     {
         planet.transform.Rotate(rotation * Time.deltaTime);
-        rbPlanet.velocity = new Vector3(13, 0, 0);
+        rbPlanet.velocity = new Vector3(50, 0, 0);
     }
 }

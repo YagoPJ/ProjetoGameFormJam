@@ -9,6 +9,9 @@ public class GerarBuff : MonoBehaviour
     public bool criar = true;
     public float timeCreate;
 
+    [SerializeField]
+    PlayerController pC;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,7 @@ public class GerarBuff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (criar == true)
+        if(criar == true && pC.canMove == true)
         {
             criar = false;
             StartCoroutine(criarInimigo());
@@ -30,7 +33,7 @@ public class GerarBuff : MonoBehaviour
         GameObject buffsLista = listaBuffs[Random.Range(0, listaBuffs.Length - 1)];
         yield return new WaitForSeconds(timeCreate);
         criar = true;
-        float y = Random.Range(-3.6f, 5.5f);
+        float y = Random.Range(-4.78f, 4.78f);
         float speed = Random.Range(0.01f, 0.05f);
         Buffs buff = Instantiate(buffsLista, transform.position + new Vector3(0, y, 0), transform.rotation = Quaternion.Euler(180, 90, -90)).GetComponent<Buffs>();
         buff.speed = speed;

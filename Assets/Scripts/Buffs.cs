@@ -18,12 +18,17 @@ public class Buffs : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(speed, 0, 0);
-        if (transform.position.x < -11.5f)
+        if (transform.position.x < -15.3f)
         {
             Destroy(gameObject);
         }
 
         if (colidiu == true)
+        {
+            Destroy(gameObject);
+        }
+
+        if (FindObjectOfType<PlayerController>().canMove == false)
         {
             Destroy(gameObject);
         }
@@ -42,19 +47,19 @@ public class Buffs : MonoBehaviour
     {
         if(buffsType == 1)
         {
-            print("buff tipo1");
+            if(PlayerController.speedNave < 0.2f)
+            {
+                print("buff tipo1");
+                PlayerController.speedNave += 0.009f;
+            } 
         }
         if (buffsType == 2)
         {
-            print("buff tipo2");
-        }
-        if (buffsType == 3)
-        {
-            print("buff tipo3");
-        }
-        if (buffsType == 4)
-        {
-            print("buff tipo4");
+            if(PlayerController.timeBullet > 0.1f)
+            {
+                print("buff tipo2");
+                PlayerController.timeBullet -= 0.07f;
+            }
         }
     }
 }

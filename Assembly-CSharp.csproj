@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3D0F6E15-BEA8-48EF-F13C-66B2B0024825}</ProjectGuid>
+    <ProjectGuid>{F04A53D5-6B6E-A8E5-F602-20F23AE6ADFA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,12 +63,12 @@
     <Compile Include="Assets\Scripts\ScrollingSkyBox.cs" />
     <Compile Include="Assets\Graphics\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
     <Compile Include="Assets\Graphics\SpaceSkies Free\Demo\Scripts\LookCamera.cs" />
+    <Compile Include="Assets\Scripts\GerarBuff.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Buffs.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\GerarInimigo.cs" />
     <Compile Include="Assets\Graphics\SpaceSkies Free\Demo\Scripts\SkyboxChanger.cs" />
-    <Compile Include="Assets\Scripts\GerarBuff.cs" />
-    <Compile Include="Assets\Scripts\Buffs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

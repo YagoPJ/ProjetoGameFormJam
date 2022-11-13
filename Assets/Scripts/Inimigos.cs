@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Inimigos : MonoBehaviour
 {
-
-    public float speed;
     private bool colidiu;
 
     [SerializeField]
@@ -20,8 +18,8 @@ public class Inimigos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position -= new Vector3(speed, 0, 0);
-        if(transform.position.x < -11.5f)
+        transform.position -= new Vector3(GameController.speedEnemy, 0, 0);
+        if(transform.position.x < -15.3f)
         {
             FindObjectOfType<PlayerController>().life -= 1;
             if (FindObjectOfType<PlayerController>().life == 0)
@@ -36,6 +34,11 @@ public class Inimigos : MonoBehaviour
             Destroy(gameObject);
             PlayerController.pontos += 1;
             gameControll.SalvarScore();
+        }
+
+        if(FindObjectOfType<PlayerController>().canMove == false)
+        {
+            Destroy(gameObject);
         }
     }
 
