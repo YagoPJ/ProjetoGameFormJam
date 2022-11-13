@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.020223647, g: 0.0064473795, b: 0.009106873, a: 1}
+  m_IndirectSpecularColor: {r: 0.030333916, g: 0.009249334, b: 0.012796414, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -248,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.046229172, y: 0.411}
   m_AnchorMax: {x: 0.15670833, y: 0.48062965}
-  m_AnchoredPosition: {x: 0.5, y: -4.4100037}
-  m_SizeDelta: {x: -4.9345703, y: -9.18}
+  m_AnchoredPosition: {x: 0.5, y: 34.902985}
+  m_SizeDelta: {x: -4.9346, y: 69.446}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &120832652
 Animator:
@@ -291,11 +291,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 0}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -718,7 +718,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
+    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -848,7 +848,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Anterior
+  m_text: <
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6fe42d385ca6c34791c351e9195cb16, type: 2}
   m_sharedMaterial: {fileID: 6413352525548478703, guid: f6fe42d385ca6c34791c351e9195cb16, type: 2}
@@ -857,8 +857,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -875,13 +875,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.3
-  m_fontSizeBase: 36.3
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1011,15 +1011,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listaBuffs:
-  - {fileID: 1577566138405873374, guid: 3bdb868a91c8be748862ec2b6e35fc9c, type: 3}
-  - {fileID: 1577566138405873374, guid: 626886cbf2bbebd4b89092bc61fa710e, type: 3}
-  - {fileID: 1577566138405873374, guid: b91bb5b3074b638469a893cb3cd5c9cf, type: 3}
-  - {fileID: 1577566138405873374, guid: b1bf50ad28307e244917b451fb768532, type: 3}
-  - {fileID: 1577566138405873374, guid: 3f812f85118a54d48a428f6587e08267, type: 3}
-  - {fileID: 1577566138405873374, guid: 76e5a72a4dac7eb4da6a7486c4e45e42, type: 3}
-  - {fileID: 1577566138405873374, guid: 8905cf64a5c32be4ebbc7e3e9fa7d1ee, type: 3}
-  - {fileID: 1577566138405873374, guid: 58619e6b09aab1542a58420c277963c3, type: 3}
-  - {fileID: 1577566138405873374, guid: 811031d3812ecd44cad0667b8a059d38, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
+  - {fileID: 53483476943308569, guid: 6c40dde290efa7441839cbf07d657ee3, type: 3}
   criar: 1
   timeCreate: 5
   pC: {fileID: 1667837046}
@@ -1089,8 +1089,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1299,8 +1299,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1626,8 +1626,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pr\xF3ximo\n"
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6fe42d385ca6c34791c351e9195cb16, type: 2}
   m_sharedMaterial: {fileID: 6413352525548478703, guid: f6fe42d385ca6c34791c351e9195cb16, type: 2}
@@ -1989,8 +1989,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2007,13 +2007,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.2
-  m_fontSizeBase: 38.2
+  m_fontSize: 200
+  m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2117,7 +2117,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
+    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2256,8 +2256,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2781,7 +2781,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
+    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -2891,8 +2891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8834582, y: 0.411}
   m_AnchorMax: {x: 0.97420824, y: 0.48062965}
-  m_AnchoredPosition: {x: -0.6184082, y: 4}
-  m_SizeDelta: {x: -4.7633057, y: -6.1800003}
+  m_AnchoredPosition: {x: -0.6184082, y: 38.358}
+  m_SizeDelta: {x: -4.7633, y: 62.536}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1277291253
 Animator:
@@ -2934,11 +2934,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 0}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3218,7 +3218,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
+    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8528,7 +8528,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.7176471, g: 0, b: 1, a: 1}
+    m_NormalColor: {r: 0.7108768, g: 0, b: 0.990566, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -9429,8 +9429,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294901943
+  m_fontColor: {r: 0.7176471, g: 0, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

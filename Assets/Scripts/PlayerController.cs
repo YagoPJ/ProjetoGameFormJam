@@ -66,6 +66,16 @@ public class PlayerController : MonoBehaviour
                 canReload = false;
                 StartCoroutine(Recarregar());
             }
+
+            //Controle de animação:
+            if (Input.GetKey(KeyCode.UpArrow))
+                animNave.Play("PlayerUpIn");
+            else if (Input.GetKeyUp(KeyCode.UpArrow))
+                animNave.Play("PlayerUpOut");
+            else if (Input.GetKey(KeyCode.DownArrow))
+                animNave.Play("PlayerDownIn");
+            else if (Input.GetKeyUp(KeyCode.DownArrow))
+                animNave.Play("PlayerDownOut");
         }
     }
 
