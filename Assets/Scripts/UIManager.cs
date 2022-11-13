@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     #region Start - MonoBehavior
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None; 
         startAnim = startButton.gameObject.GetComponent<Animator>();
         aboutAnim = aboutButton.gameObject.GetComponent<Animator>();
         customizeAnim = customizeButton.gameObject.GetComponent<Animator>();
@@ -132,7 +133,7 @@ public class UIManager : MonoBehaviour
         customizeButton.SetActive(false);
         title.SetActive(false);
         titlePontos.SetActive(false);
-
+        Cursor.lockState = CursorLockMode.Locked;
         fadeBlockAnim.Play("FadeBlockerOut");
 
         player.gameObject.GetComponent<Animator>().Play("PlayerStartAnim");

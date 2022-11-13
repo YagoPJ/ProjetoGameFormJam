@@ -70,6 +70,7 @@ public class GameController : MonoBehaviour
             pC.canMove = false;
             gameOverPanel.SetActive(true);
             fadePanel.SetActive(false);
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
