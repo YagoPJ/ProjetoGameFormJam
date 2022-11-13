@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject backAboutButton;
     [SerializeField] GameObject lifeText;
     [SerializeField] GameObject pointsText;
+    [SerializeField] GameObject panelSobre;
 
     Animator startAnim;
     Animator aboutAnim;
@@ -115,12 +116,17 @@ public class UIManager : MonoBehaviour
     public void About()
     {
         FadeOutMainMenuButtons();
-
+        title.SetActive(false);
+        titlePontos.SetActive(false);
         backAboutButton.SetActive(true);
+        panelSobre.SetActive(true);
         aboutText.gameObject.GetComponent<Animator>().Play("AboutTextIn");
     }
     public void BackFromAbout()
     {
+        panelSobre.SetActive(false);
+        title.SetActive(true);
+        titlePontos.SetActive(true);
         BackToMainScreen(System.Reflection.MethodBase.GetCurrentMethod().Name);
     }
     #endregion

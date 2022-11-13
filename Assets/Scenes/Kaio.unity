@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.006444437, g: 0.0020878878, b: 0.003177071, a: 1}
+  m_IndirectSpecularColor: {r: 0.020223647, g: 0.0064473795, b: 0.009106873, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -244,7 +244,7 @@ RectTransform:
   m_Children:
   - {fileID: 314226481}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.046229172, y: 0.411}
   m_AnchorMax: {x: 0.15670833, y: 0.48062965}
@@ -671,7 +671,7 @@ RectTransform:
   m_Children:
   - {fileID: 2113291727}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.43800002, y: 0.43100002}
   m_AnchorMax: {x: 0.5614792, y: 0.49259257}
@@ -1401,6 +1401,7 @@ RectTransform:
   - {fileID: 2070740784}
   - {fileID: 139889727}
   - {fileID: 537660462}
+  - {fileID: 597832467}
   - {fileID: 1436466138}
   - {fileID: 1689918757}
   - {fileID: 265434151}
@@ -1847,6 +1848,81 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &597832464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 597832467}
+  - component: {fileID: 597832466}
+  - component: {fileID: 597832465}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &597832465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597832464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.92156863}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &597832466
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597832464}
+  m_CullTransparentMesh: 1
+--- !u!224 &597832467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597832464}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 489054278}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.025814816}
+  m_AnchorMax: {x: 0.8756457, y: 1}
+  m_AnchoredPosition: {x: 1.6525879, y: 0.000061035156}
+  m_SizeDelta: {x: 3.3051996, y: 0.00012207031}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &814775596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,11 +2089,11 @@ RectTransform:
   m_Children:
   - {fileID: 967062984}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8834582, y: 0.023185184}
-  m_AnchorMax: {x: 0.98600006, y: 0.08518518}
-  m_AnchoredPosition: {x: 4.419983, y: -1.4623413}
+  m_AnchorMin: {x: 0.8834582, y: 0.049111117}
+  m_AnchorMax: {x: 0.98600006, y: 0.111111104}
+  m_AnchoredPosition: {x: 4.419922, y: 1}
   m_SizeDelta: {x: -1.6399994, y: -0.9469986}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899551026
@@ -2677,11 +2753,11 @@ RectTransform:
   m_Children:
   - {fileID: 369741516}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.8834582, y: 0.023185184}
-  m_AnchorMax: {x: 0.98600006, y: 0.08518518}
-  m_AnchoredPosition: {x: 3.2999878, y: -1.4736938}
+  m_AnchorMin: {x: 0.8834582, y: 0.049111117}
+  m_AnchorMax: {x: 0.98600006, y: 0.111111104}
+  m_AnchoredPosition: {x: 3.3000488, y: 1}
   m_SizeDelta: {x: 0.6000061, y: -0.94740295}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1220971468
@@ -2811,7 +2887,7 @@ RectTransform:
   m_Children:
   - {fileID: 814775597}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8834582, y: 0.411}
   m_AnchorMax: {x: 0.97420824, y: 0.48062965}
@@ -2962,7 +3038,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontosMax: {fileID: 1693501526}
   pontosTxt: {fileID: 537660465}
+  sobreTxt: {fileID: 1436466134}
   painelPause: {fileID: 437170867}
+  painelSobre: {fileID: 597832464}
   pauseOn: 0
   pC: {fileID: 1667837046}
   gameOverPanel: {fileID: 1778537241}
@@ -3021,6 +3099,7 @@ MonoBehaviour:
   backAboutButton: {fileID: 899551024}
   lifeText: {fileID: 1638380335}
   pointsText: {fileID: 1830451836}
+  panelSobre: {fileID: 597832464}
   fadeBlockAnim: {fileID: 2070740787}
   shooterMesh:
   - {fileID: 1269116562925425082, guid: 9eafec2478441af418574f3e9e971f8d, type: 3}
@@ -3092,7 +3171,7 @@ RectTransform:
   m_Children:
   - {fileID: 439772881}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.43800002, y: 0.34114817}
   m_AnchorMax: {x: 0.5614792, y: 0.411}
@@ -8055,7 +8134,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Texto do sobre
+  m_text: "Running War se passa no espa\xC7o, no ano de 2073.\nAtualmente as civiLIZA\xC7\xD5ES
+    EST\xC3O MUITO AVAN\xC7ADAS, QUE NOS FORNECE A POSSIBILIDADE DE PILOTAR NAVES
+    TECNOLOGICAS.\nNESSE UNIVERSO, EXISTE UM GRUPO DE TERRORISTA ESPACIAIS, QUE COSTUMAM
+    INVADIR E DOMINAR PLANETAS, POR\xC9M ELES ENCONTRARAM UMA DIFICULDADE AO INVADIR
+    UMA PEQUENA CIVILIZA\xC7\xC3O.\nNO JOGO, ACOMPANHAMOS UM PILOTO E SUA NAVE, EM
+    UMA GUERRA INFINITA, PARA IMPEDIR A DOMINA\xC7\xC3O DOS TERRORISTAS, ONDE O MAIOR
+    OBJETIVO \xC9 DETRUIR O MAXIMO DE INIMIGOS POSSIVEIS.\n-\nO JOGO CONTEM APRIMORAMENTOS,
+    VARIOS INIMIGOS, PONTOS E VIDAS, TODO O NECESSARIO PARA VOC\xCA SE SUPERAR A
+    CADA TENTATIVA.\n-\nJOGO PRODUZIDO PARA A SUPER GAME JAM - GAME FORM.\n-\nPRODUTORES:\nKAIO
+    OLIVEIRA\nGUILHERME JANOARIO\nLUCAS PIFFANELI\nLUIS Filipe\nLARISSA TAMY UEHARA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f6fe42d385ca6c34791c351e9195cb16, type: 2}
   m_sharedMaterial: {fileID: 6413352525548478703, guid: f6fe42d385ca6c34791c351e9195cb16, type: 2}
@@ -8082,15 +8170,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -8118,7 +8206,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -68.43762, y: 0, z: -13.6875, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -8163,12 +8251,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489054278}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: 0}
-  m_SizeDelta: {x: 241.17, y: 46}
+  m_AnchorMin: {x: 0, y: 0.03877778}
+  m_AnchorMax: {x: 0.8698751, y: 0.95881504}
+  m_AnchoredPosition: {x: 33, y: -2.5}
+  m_SizeDelta: {x: -88.338, y: -11.48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1638380335
 GameObject:
@@ -8200,7 +8288,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489054278}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.016, y: 0.88400006}
   m_AnchorMax: {x: 0.05247917, y: 0.95881504}
@@ -8393,7 +8481,7 @@ RectTransform:
   m_Children:
   - {fileID: 500469617}
   m_Father: {fileID: 489054278}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4354792, y: 0.511111}
   m_AnchorMax: {x: 0.5614792, y: 0.573}
@@ -8721,7 +8809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4113171, y: 0.13980862}
   m_AnchorMax: {x: 0.5891586, y: 0.24556173}
-  m_AnchoredPosition: {x: -0.5, y: 1.9211121}
+  m_AnchoredPosition: {x: -0.5, y: 1.9211426}
   m_SizeDelta: {x: -2.0598145, y: -2.1578064}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773866280
@@ -8892,7 +8980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.805115, y: -19.81128}
+  m_AnchoredPosition: {x: -8.805176, y: -19.81128}
   m_SizeDelta: {x: -193.7107, y: -259.7484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1830451836
@@ -8925,11 +9013,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489054278}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8698751, y: 0.9062223}
   m_AnchorMax: {x: 0.98600006, y: 0.9861482}
-  m_AnchoredPosition: {x: 87.650024, y: 18.242004}
+  m_AnchoredPosition: {x: 87.6499, y: 18.241943}
   m_SizeDelta: {x: -169.29199, y: -37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830451838

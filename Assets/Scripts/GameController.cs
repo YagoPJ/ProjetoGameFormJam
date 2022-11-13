@@ -9,7 +9,9 @@ public class GameController : MonoBehaviour
 {
     public Text pontosMax;
     public TextMeshProUGUI pontosTxt;
+    public GameObject sobreTxt;
     public GameObject painelPause;
+    public GameObject painelSobre;
     public bool pauseOn = false;
     public PlayerController pC;
     public static int pontosRank;
@@ -69,7 +71,9 @@ public class GameController : MonoBehaviour
         {
             pC.canMove = false;
             gameOverPanel.SetActive(true);
+            painelSobre.SetActive(false);
             fadePanel.SetActive(false);
+            sobreTxt.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
         }
     }
